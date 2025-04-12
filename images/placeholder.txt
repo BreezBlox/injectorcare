@@ -1,0 +1,4 @@
+This directory contains the following placeholder images that will be replaced with real images:
+- hero-bg.jpg - Hero section background image
+- cta-bg.jpg - Call-to-action section background image
+- injector-diagram.png - Fuel injector diagram for the replacement section

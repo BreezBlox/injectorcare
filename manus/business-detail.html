@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags -->
+    <title>Elite Injector Services - Fuel Injector Cleaning | InjectorCare</title>
+    <meta name="description" content="Elite Injector Services provides professional fuel injector cleaning and testing services in Chicago, IL. Specializing in ultrasonic cleaning and precision flow testing.">
+    <link rel="canonical" href="https://injectorcare.com/business/elite-injector-services/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Elite Injector Services - Fuel Injector Cleaning | InjectorCare">
+    <meta property="og:description" content="Elite Injector Services provides professional fuel injector cleaning and testing services in Chicago, IL. Specializing in ultrasonic cleaning and precision flow testing.">
+    <meta property="og:url" content="https://injectorcare.com/business/elite-injector-services/">
+    <meta property="og:type" content="website">
+    
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* Main Content Styles */
+        main {
+            padding: 40px 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 30px 0 15px;
+            color: #0056b3;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            color: #0069d9;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        a {
+            color: #0069d9;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        /* Breadcrumb Styles */
+        .breadcrumb {
+            display: flex;
+            list-style: none;
+            margin: 0 0 20px 0;
+            padding: 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb li {
+            margin-right: 5px;
+            margin-bottom: 0;
+        }
+        
+        .breadcrumb li:after {
+            content: "›";
+            margin-left: 5px;
+            color: #6c757d;
+        }
+        
+        .breadcrumb li:last-child:after {
+            content: "";
+        }
+        
+        .breadcrumb a {
+            color: #0069d9;
+        }
+        
+        .breadcrumb .home-icon {
+            color: #0069d9;
+        }
+        
+        /* Business Detail Styles */
+        .business-detail {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .business-images {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .image-thumbnails {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 3px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .thumbnail:hover, .thumbnail.active {
+            opacity: 1;
+        }
+        
+        .business-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .business-header {
+            margin-bottom: 20px;
+        }
+        
+        .business-address {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        
+        .rating {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .rating-icon {
+            color: #ffc107;
+            margin-right: 2px;
+            font-size: 1.2rem;
+        }
+        
+        .business-actions {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .action-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            width: 80px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .action-button:hover {
+            background-color: #e9ecef;
+        }
+        
+        .action-icon {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .contact-icon {
+            margin-right: 10px;
+            color: #0069d9;
+        }
+        
+        .website-button {
+            display: inline-block;
+            background-color: #0069d9;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .website-button:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+        
+        /* Services Section */
+        .services-section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .service-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #0069d9;
+        }
+        
+        /* Reviews Section */
+        .reviews-section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .review-button {
+            background-color: #00b8e6;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .review-button:hover {
+            background-color: #00a3cc;
+        }
+        
+        .no-reviews {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+        }
+        
+        .be-first {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* Photos Section */
+        .photos-section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .photos-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .no-photos {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+        }
+        
+        .add-photo-button {
+            background-color: #00b8e6;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .add-photo-button:hover {
+            background-color: #00a3cc;
+        }
+        
+        /* Questions Section */
+        .questions-section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .questions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .ask-button {
+            background-color: #00b8e6;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .ask-button:hover {
+            background-color: #00a3cc;
+        }
+        
+        /* Map Section */
+        .map-section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .map-container {
+            height: 300px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+        }
+        
+        /* Similar Businesses Section */
+        .similar-section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .similar-businesses {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .similar-card {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .similar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .similar-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .similar-info {
+            padding: 15px;
+        }
+        
+        .similar-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .similar-location {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        /* Quick Links Section */
+        .quick-links {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .quick-links h3 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .link-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        
+        .link-item:hover {
+            background-color: #e9ecef;
+        }
+        
+        .link-icon {
+            margin-right: 5px;
+            color: #0069d9;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            .nav-links {
+                margin-top: 20px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .business-actions {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .similar-businesses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">InjectorCare</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <ul class="breadcrumb">
+            <li><a href="/"><span class="home-icon">🏠</span> Home</a></li>
+            <li><a href="/services/">Fuel Injector Services</a></li>
+            <li><a href="/services/united-states/">United States</a></li>
+            <li><a href="#" id="location-breadcrumb">Chicago</a></li>
+            <li id="business-breadcrumb">Elite Injector Services</li>
+        </ul>
+        
+        <div class="business-detail">
+            <div class="business-images">
+                <img id="main-image" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Elite Inj
+(Content truncated due to size limit. Use line ranges to read in chunks)

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps API Test</title>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Maps API Test</h1>
+    <div id="map"></div>
+    
+    <script>
+        // This function will be called when the Google Maps API loads
+        function initMap() {
+            console.log("Google Maps API loaded successfully!");
+            
+            // Create a simple map
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 40.7128, lng: -74.0060 }, // New York
+                zoom: 8
+            });
+            
+            // Add a marker
+            new google.maps.Marker({
+                position: { lat: 40.7128, lng: -74.0060 },
+                map: map,
+                title: "New York"
+            });
+        }
+        
+        function gm_authFailure() {
+            console.error("Google Maps authentication failed! Check your API key.");
+            document.getElementById("map").innerHTML = 
+                "<p style='color:red;padding:20px;'>Google Maps API failed to load. This is likely due to an invalid API key or API key restrictions.</p>";
+        }
+    </script>
+    
+    <!-- Load the Google Maps JavaScript API with your key -->
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQFYS_pacjP072lhBmnT1xK9DcqzQ_DNE&callback=initMap" 
+        async defer
+    ></script>
+</body>
+</html>

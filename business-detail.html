@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Injector Cleaning Service Details | InjectorCare</title>
+    <meta name="description" content="Detailed information about fuel injector cleaning services, including contact information, services offered, and ratings.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Business Detail Page Styles */
+        .breadcrumbs {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumbs a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        
+        .business-header {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .business-header-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .business-title {
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        
+        .business-location {
+            color: #6c757d;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .rating {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .business-image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .business-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .business-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .business-description {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .business-info-sidebar {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #0056b3;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            margin-right: 10px;
+            color: #0056b3;
+            min-width: 20px;
+            text-align: center;
+        }
+        
+        .contact-text {
+            flex: 1;
+        }
+        
+        .services-list {
+            margin-top: 20px;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            padding: 10px 15px;
+            border-radius: 4px;
+            color: #495057;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #e9ecef;
+        }
+        
+        .back-button i {
+            margin-right: 8px;
+        }
+        
+        /* Enhanced styling for business details */
+        .review {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .review-author {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .review-rating i {
+            color: #ffc107;
+            font-size: 14px;
+        }
+        
+        .review-time {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .review-content {
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .rating i.fas.fa-star, .rating i.fas.fa-star-half-alt {
+            color: #ffc107;
+            font-size: 16px;
+            margin-right: 2px;
+        }
+        
+        .rating i.far.fa-star {
+            color: #e0e0e0;
+            font-size: 16px;
+            margin-right: 2px;
+        }
+        
+        .rating span {
+            color: #666;
+            margin-left: 5px;
+            font-size: 16px;
+        }
+        
+        .hours-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .hours-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .quick-links {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .quick-links a {
+            display: flex;
+            align-items: center;
+            padding: 5px 8px;
+            color: #0056b3;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .quick-links a i {
+            width: 16px;
+            margin-right: 5px;
+            text-align: center;
+        }
+        
+        .quick-links a:hover {
+            background-color: #f0f7ff;
+            border-radius: 4px;
+        }
+        
+        #business-services li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        #business-services li i {
+            color: #28a745;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        
+        .business-map {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        
+        .expand-map {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0056b3;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .expand-map i {
+            margin-right: 5px;
+        }
+        
+        /* Content container spacing fixes */
+        main .container {
+            padding: 30px 15px;
+        }
+        
+        section.about-section {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        section.about-section h2 {
+            margin-top: 0;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .business-header {
+                flex-direction: column;
+            }
+            
+            .business-content {
+                flex-direction: column;
+            }
+            
+            .related-businesses {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-links {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-top: 15px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>InjectorCare</h1>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="find-services.html" class="active">Find Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> &gt; 
+                <a href="find-services.html">Find Services</a> &gt; 
+                <span id="business-breadcrumb"></span>
+            </div>
+            
+            <a href="#" id="back-to-search" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to search results
+            </a>
+            
+            <div class="business-header">
+                <div class="business-header-info">
+                    <h1 id="business-name" class="business-title"></h1>
+                    <div id="business-location" class="business-location"></div>
+                    <div id="business-rating" class="rating"></div>
+                </div>
+                
+                <div class="business-image-container">
+                    <img id="business-image" src="" alt="" class="business-image">
+                    <div class="quick-links">
+                        <a href="#" id="get-directions"><i class="fas fa-directions"></i> Get Directions</a>
+                        <a href="#" id="share-button"><i class="fas fa-share-alt"></i> Share</a>
+                        <a href="#" id="save-button"><i class="far fa-bookmark"></i> Save</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="business-content">
+                <div class="business-description">
+                    <section class="about-section">
+                        <h2>About this service provider</h2>
+                        <p id="business-description"></p>
+                        
+                        <h3>Services offered</h3>
+                        <ul id="business-services" class="services-list"></ul>
+                    </section>
+                    
+                    <section class="reviews-section" style="margin-top: 30px;">
+                        <h2>Reviews</h2>
+                        <div id="business-reviews"></div>
+                    </section>
+                    
+                    <section class="map-section" style="margin-top: 30px;">
+                        <h2>Location</h2>
+                        <div class="business-map" id="business-map"></div>
+                        <a class="expand-map" id="expand-map"><i class="fas fa-expand-alt"></i> View Larger Map</a>
+                    </section>
+                </div>
+                
+                <div class="business-info-sidebar">
+                    <h3 class="contact-title">Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text" id="business-address"></div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text" id="business-phone"></div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-text">
+                            <a id="business-website" href="#" target="_blank"></a>
+                        </div>
+                    </div>
+                    
+                    <h3 class="contact-title" style="margin-top: 25px;">Hours of Operation</h3>
+                    <ul id="business-hours" class="hours-list"></ul>
+                </div>
+            </div>
+            
+            <div class="related-businesses-section">
+                <h2>Similar service providers</h2>
+                <div id="related-businesses" class="related-businesses">
+                    <!-- Related businesses will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+        
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Need Professional Injector Cleaning?</h2>
+                    <p>Choose our specialized ultrasonic cleaning services for optimal fuel injector performance. We offer full diagnostics, cleaning, and rebuilding with a focus on performance and efficiency.</p>
+                    <div class="cta-btn-container">
+                        <a href="services.html" class="btn btn-primary">View Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="contact-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>millertimedsm@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading indicator while scripts initialize -->
+    <div id="loading-indicator" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255,255,255,0.9); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;">
+        <div style="width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid #4CAF50; border-radius: 50%; animation: spin 2s linear infinite;"></div>
+        <p style="margin-top: 20px; font-size: 18px;">Loading business details...</p>
+        <style>
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+    </div>
+
+    <!-- Load supporting scripts first -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Google Maps API - MUST be loaded before detail.js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6NnFQ7X6Afvf62OSuTckfosZwuGsx-dI&libraries=places"></script>
+    
+    <!-- Then load detail.js which will handle all business details -->
+    <script src="js/detail.js"></script>
+    
+    <!-- Load google-places-api.js last as it's not crucial for this page -->
+    <script src="js/google-places-api.js"></script>
+    
+    <!-- Hide loading indicator after everything is loaded -->
+    <script>
+        window.addEventListener('load', function() {
+            // Hide after a short delay
+            setTimeout(function() {
+                document.getElementById('loading-indicator').style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
