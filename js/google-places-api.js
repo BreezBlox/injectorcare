@@ -443,58 +443,6 @@ function displayBusinessResults(results, status, location) {
     // Use status directly, as the new methods don't pass a string status like the old service
     // We determine success/failure based on the try/catch blocks in searchForBusinesses
     if (status === 'OK' && results && results.length > 0) {
-        // Add a test navigation button at the top (outside normal cards)
-        const testButtonContainer = document.createElement('div');
-        testButtonContainer.style.position = 'sticky';
-        testButtonContainer.style.top = '10px';
-        testButtonContainer.style.backgroundColor = 'lightblue';
-        testButtonContainer.style.padding = '10px';
-        testButtonContainer.style.marginBottom = '20px';
-        testButtonContainer.style.zIndex = '1000';
-        testButtonContainer.style.textAlign = 'center';
-        
-        testButtonContainer.innerHTML = `
-            <p><strong>TESTING ONLY:</strong> If regular buttons don't work, try these links:</p>
-            <a href="index.html" style="display:inline-block; padding: 10px; background-color: #ff6b6b; color: white; text-decoration: none; margin-right: 10px;">
-                Go to Home Page
-            </a>
-            <a href="contact.html" style="display:inline-block; padding: 10px; background-color: #ff6b6b; color: white; text-decoration: none; margin-right: 10px;">
-                Go to Contact Page
-            </a>
-            <a href="services.html" style="display:inline-block; padding: 10px; background-color: #ff6b6b; color: white; text-decoration: none;">
-                Go to Services Page
-            </a>
-            <hr style="margin: 10px 0;">
-            <p><strong>Test Detail Page Access:</strong></p>
-            <a href="business-detail.html" style="display:inline-block; padding: 10px; background-color: #4CAF50; color: white; text-decoration: none; margin-right: 10px;">
-                Business Detail (No Parameters)
-            </a>
-            <a href="business-detail.html?id=ChIJi3R7xDGKUocRbSE4UmrY2Eg" style="display:inline-block; padding: 10px; background-color: #4CAF50; color: white; text-decoration: none; margin-right: 10px;">
-                Business Detail (With Fixed ID)
-            </a>
-            <a href="business-detail.html?id=fakeID12345" style="display:inline-block; padding: 10px; background-color: #4CAF50; color: white; text-decoration: none;">
-                Business Detail (With Fake ID)
-            </a>
-            <hr style="margin: 10px 0;">
-            <button id="test-nav-button" style="padding: 10px; background-color: #ff6b6b; color: white; border: none; cursor: pointer;">
-                Test Navigation Button
-            </button>
-        `;
-        
-        businessGrid.appendChild(testButtonContainer);
-        
-        // Attach direct event handler to test button
-        document.getElementById('test-nav-button').onclick = function() {
-            console.log('[gpa.js] Test button clicked!');
-            alert('Test button clicked! Navigating...');
-            // Navigate to first business if available
-            if (results && results.length > 0) {
-                window.location.href = 'business-detail.html?id=' + results[0].id;
-            } else {
-                alert('No businesses available to navigate to')
-            }
-        };
-        
         results.forEach((place, index) => {
             // Adapt property access based on the new Place object structure
             const placeId = place.id;
